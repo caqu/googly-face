@@ -1,26 +1,31 @@
 <template>
-  <div id="app">
+  <div class="app">
     <div>
-      This is a Vue.js app that uses a web component
-      created with Svelte.js for the googly eyes.
+      This is a Vue.js app that uses:
+      <li>
+        a web component
+        created with Svelte.js for the googly eyes.
+      </li>
+      <li>a nose imported and bundled Vue component</li>
+      <li>a goat-tee Vanilla JS goat-tee component</li>
     </div>
-    <div>
+    <div class="face">
       <img alt="Vue logo" src="./assets/logo.png" width="100" />
       <br />
-      <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
       <googly-eyes v-bind:x="pupil_x" v-bind:y="pupil_y" width="48">
         <u class="fallbabk-eyes">(0)(0)</u>
       </googly-eyes>
-      <googly-eyes v-bind:x="pupil_x" v-bind:y="pupil_y" width="48" />
+      <googly-eyes v-bind:x="pupil_x" v-bind:y="pupil_y" width="52" />
+      <br />
+      <GooglyNose />
+      <!-- <googly-mouth /> -->
+      <googly-goat-tee />
     </div>
-    <!-- <googly-nose /> -->
-    <!-- <googly-mouth /> -->
-    <br />
   </div>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
+import GooglyNose from "./components/GooglyNose.vue";
 export default {
   name: "googly-face",
   data: function() {
@@ -48,18 +53,22 @@ export default {
     };
   },
   components: {
-    // HelloWorld,
+    GooglyNose
   }
 };
 </script>
 
 <style>
-#app {
+body {
+  background: #f0f8fe;
+}
+.app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.face {
+  text-align: center;
 }
 </style>
