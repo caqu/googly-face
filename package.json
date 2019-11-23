@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.3.2",
-    "googly-goat-tee": "file:../googly-goat-tee",
+    "googly-goat-tee": "github:caqu/googly-goat-tee",
     "googly-eyes": "github:caqu/googly-eyes#master",
     "vue": "^2.6.10"
   },
