@@ -1,24 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      This is a Vue.js app that uses a web component
+      created with Svelte.js for the googly eyes.
+    </div>
+    <div>
+      <img alt="Vue logo" src="./assets/logo.png" width="100" />
+      <br />
+      <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
+      <googly-eyes>
+        <u class="fallbabk-eyes">(0)(0)</u>
+      </googly-eyes>
+      <googly-eyes />
+    </div>
+    <!-- <googly-nose /> -->
+    <!-- <googly-mouth /> -->
+    <br />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+// import HelloWorld from "./components/HelloWorld.vue";
 export default {
-  name: 'app',
+  name: "googly-face",
+  methods: {
+    log(args) {
+      window.console.log(...args);
+    }
+  },
   components: {
-    HelloWorld
+    // HelloWorld,
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
